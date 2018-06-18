@@ -3,6 +3,7 @@ from textblob import TextBlob
 
 #This application is meant to collect tweets and gather data
 #to be analyzed fo further use
+#https://apps.twitter.com/app/
 
 #My twitter apps API
 consumer_key = "consumer_key"
@@ -30,10 +31,10 @@ public_tweets = api.search('Trump')
 #first we assign the name om the file followed by a 'w+'
 #the w stands for write while + stands for creating the file
 #if it doesn't already exist
-file = open("tweets.txt", "w+")
-file2 = open("analysis.txt", "w+")
+file = open("tweets.txt", "a+")
+
 
 for tweet in public_tweets:
     file.write(tweet.text)
     analysis = TextBlob(tweet.text)
-    file2.write(str(analysis))
+    file.write(str(analysis))
