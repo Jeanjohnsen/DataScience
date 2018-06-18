@@ -23,9 +23,16 @@ auth.set_access_token(access_token, access_token_secret)
 #Find other users
 api = tweepy.API(auth)
 
+
+#variables for dates from when i will be stripping data
+person_of_interest = '@realDonaldTrump'
+since_date = "01-01-2016"
+until_date = "19-06-2018"
+
 #variable to store public tweets using the .search method
 #the search method only takes a single argument that we will search for
-public_tweets = api.search('Trump')
+public_tweets = api.search(q = person_of_interest, count = 1000, since = since_date, until = until_date)
+
 
 #Let's create a file to store our data in
 #first we assign the name om the file followed by a 'w+'
