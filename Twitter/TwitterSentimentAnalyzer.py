@@ -5,12 +5,12 @@ from textblob import TextBlob
 #to be analyzed fo further use
 
 #My twitter apps API
-consumer_key = "ldixugoeJP4Mbsj3t2FovQF4x"
-consumer_secret = "85Ew7cyokcHcyOiOB7oCj7YTfANpHWOt6osdHK0t1NUPpBN1kR"
+consumer_key = "consumer_key"
+consumer_secret = "consumer_secret"
 
 #This access token can be used to make API requests on your own account's behalf.
-access_token = "996752375770644482-XJgGbNwyx5UbwrStQoNh9bzqV9NtUT3"
-access_token_secret = "vHSeJ6x5lPccqF3HXsZ1dMCkduaC2hl89PY3naJBlZKfB"
+access_token = "access_token"
+access_token_secret = "access_token_secret"
 
 #Authentication handler for logging in
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
